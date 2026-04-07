@@ -3,11 +3,8 @@ const app = express();
 
 app.use(express.json());
 
-app.use("/api/v1", (req, res) => {
-  res.json({
-    success: true,
-    message: "Welcome to the API",
-  });
+app.get("/", (req, res) => {
+  res.send("Hello, World!");  
 });
 
 app.listen(3000, () => {
